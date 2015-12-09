@@ -1,7 +1,7 @@
 
 create:
 	jekyll new .new
-	cp -R .new/ .
+	cp -R .new/* ./
 	rm -rf .new/
 
 serve:
