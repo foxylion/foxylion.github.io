@@ -64,7 +64,7 @@
 
     small {
       display: block;
-      color: #aaa;
+      color: $gray-color;
     }
   }
 }
@@ -106,6 +106,7 @@
   .divider {
     padding-left: .1em;
     padding-right: .1em;
+    color: $gray-color;
   }
 
   .btn {
@@ -129,7 +130,7 @@
 
   .post-meta {
     font-style: italic;
-    color: #aaa;
+    color: $gray-color;
   }
 
   &:after {
@@ -188,13 +189,13 @@
   margin-top: 1.5em;
 
   small {
-    color: #aaa;
+    color: $gray-color;
     font-size: .8em;
     display: block;
   }
 
   a {
-    color: #aaa;
+    color: $gray-color;
   }
 }
 
