@@ -1,9 +1,8 @@
 
 <article class="post">
-    <h1>
-    	{{ post.title }}
-    	<a href="{{ post.website }}">Website</a>
-    </h1>
+    <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
     <img src="{{ post.screenshot }}" alt="Screenshot">
+
+    <a href="{{ post.website }}" class="btn" target="_blank">Website</a>
 </article>

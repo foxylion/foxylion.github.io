@@ -141,18 +141,6 @@
 }
 
 .listing .post {
-  h1 {
-    a {
-      font-size: 0.6em;
-      color: $primary-color;
-    }
-    a:before {
-      content: "[";
-    }
-    a:after {
-      content: "]";
-    }
-  }
   .info {
     background-color: #eee;
     margin-bottom: 1em;
