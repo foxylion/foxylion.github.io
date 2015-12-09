@@ -1,6 +1,5 @@
 
 title: Home of Jakob Jarosch
-email: dev@jakobjarosch.de
 description: > # GitHub user page of Jakob Jarosch (@foxylion)
 baseurl: ""
 url: "https://www.jakobjarosch.de"
@@ -17,20 +16,38 @@ sass:
   sass_dir: _scss
   style: compressed
 
-# social footer
 social:
-  github:
-    slug: github
-    link: http://github.com/foxylion
-  facebook:
-    slug: facebook
-    link: http://facebook.com/foxylion
-  twitter:
-    slug: twitter
-    link: http://twitter.com/foxylion
-  instagram:
-    slug: instagram
-    link: http://instagram.com/foxylion
-  linkedin:
-    slug: linkedin
-    link: http://linkedin.com/in/jakobjarosch
+- slug: github
+  link: https://github.com/foxylion
+- slug: stackoverflow
+  link: https://stackoverflow.com/users/439126/foxylion
+- slug: linkedin
+  link: https://linkedin.com/in/jakobjarosch
+- slug: xing
+  link: https://www.xing.com/profile/Jakob_Jarosch
+- slug: facebook
+  link: https://facebook.com/foxylion
+- slug: googleplus
+  link: https://plus.google.com/u/0/+JakobJarosch
+- slug: twitter
+  link: https://twitter.com/foxylion
+- slug: reddit
+  link: https://www.reddit.com/user/foxylion
+- slug: spotify
+  link: https://play.spotify.com/user/foxylion
+- slug: lastfm
+  link: https://www.last.fm/de/user/foxylion
+- slug: youtube
+  link: https://www.youtube.com/user/foxylion
+- slug: instagram
+  link: https://www.instagram.com/foxylion
+- slug: 500px
+  link: https://500px.com/foxylion
+- slug: flickr
+  link: https://www.flickr.com/photos/foxylion
+- slug: steam
+  link: https://steamcommunity.com/id/foxylion
+- slug: mail
+  link: mailto:dev@jakobjarosch.de
+- slug: skype
+  link: skype://foxylion
