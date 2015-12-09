@@ -1,0 +1,15 @@
+
+<article class="post">
+    <h1>
+    	{{ post.title }}
+    	{% if post.website %}<a href="{{ post.website }}">Website</a>{% endif %}
+    </h1>
+    <p>{{ post.content }}</p>
+
+    <img src="{{ post.screenshot }}" alt="Screenshot">
+
+    <div class="info">
+    	<p><label>Techniques</label> {{ post.techniques }}</p>
+    	<p><label>Release date</label> {{ post.release_date }}</p>
+    </div>
+</article>

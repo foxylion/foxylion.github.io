@@ -1,0 +1,13 @@
+---
+layout: default
+title: Blog
+bodyclass: home
+---
+
+<hr class="hr">
+
+<section class="posts txt-center container">
+  {% for post in site.categories.blog %}
+    {% include article.html %}
+  {% endfor %}
+</section>

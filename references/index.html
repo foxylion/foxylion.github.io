@@ -1,0 +1,17 @@
+---
+layout: default
+title: References
+bodyclass: listing
+---
+
+Those references are in a chronological order, and only represent the work I do in my spare time.
+See also my <a href="/projects/">projects</a> for some other work by me.
+
+<hr class="hr">
+
+<section class="posts txt-center container">
+  {% for post in site.categories.references %}
+    {% include reference.html %}
+  {% endfor %}
+</section>
+

@@ -1,0 +1,36 @@
+
+title: Home of Jakob Jarosch
+email: dev@jakobjarosch.de
+description: > # GitHub user page of Jakob Jarosch (@foxylion)
+baseurl: ""
+url: "https://foxylion.github.io"
+repository: "https://github.com/foxylion/foxylion.github.io"
+google_analytics: UA-2072722-6
+
+permalink   : /:categories/:year/:title/
+markdown    : kramdown
+highlighter : pygments
+
+source: .
+destination: _site
+sass:
+  sass_dir: _scss
+  style: compressed
+
+# social footer
+social:
+  github:
+    slug: github
+    link: http://github.com/foxylion
+  facebook:
+    slug: facebook
+    link: http://facebook.com/foxylion
+  twitter:
+    slug: twitter
+    link: http://twitter.com/foxylion
+  instagram:
+    slug: instagram
+    link: http://instagram.com/foxylion
+  linkedin:
+    slug: linkedin
+    link: http://linkedin.com/in/jakobjarosch

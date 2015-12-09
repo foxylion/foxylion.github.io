@@ -1,0 +1,12 @@
+---
+layout: default
+title: Downloads
+bodyclass: downloads
+---
+
+<section class="posts txt-center container">
+  {% for post in site.categories.downloads %}
+    {% include download.html %}
+  {% endfor %}
+</section>
+
