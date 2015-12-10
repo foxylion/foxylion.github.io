@@ -1,6 +1,8 @@
 ---
 title: "Thumbnail Class"
-language: PHP
+technologies: PHP, GDlib
+loc: 242
+release: 2006
 download_url: https://files.foxylion.de/downloads/thumbnail-class.zip
 ---
 

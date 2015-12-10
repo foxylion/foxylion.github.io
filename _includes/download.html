@@ -1,6 +1,13 @@
 
 <article class="post">
-    <h1>{{ post.title }} <sup>[{{ post.language }}]</sup></h1>
+    <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
+
+    <div class="info">
+        <p><label>Technologies</label> {{ post.technologies }}</p>
+        <p><label>Lines of code</label> {{ post.loc }}</p>
+        <p><label>Release year</label> {{ post.release }}</p>
+    </div>
+
     <a href="{{ post.download_url }}" class="btn">Download</a>
 </article>

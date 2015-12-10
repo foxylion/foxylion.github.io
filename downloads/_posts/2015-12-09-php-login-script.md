@@ -1,6 +1,8 @@
 ---
 title: "Login Script"
-language: PHP
+technologies: PHP, MySQL, HTML, CSS
+loc: 307
+release: 2006
 download_url: https://files.foxylion.de/downloads/loginscript.zip
 ---
 

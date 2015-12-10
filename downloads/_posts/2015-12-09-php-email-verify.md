@@ -1,6 +1,8 @@
 ---
 title: "Email Verification"
-language: PHP
+technologies: PHP, HTML
+loc: 171
+release: 2006
 download_url: https://files.foxylion.de/downloads/email-verify.zip
 ---
 

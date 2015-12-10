@@ -1,6 +1,8 @@
 ---
 title: "FTP Class"
-language: PHP
+technologies: PHP, FTP
+loc: 385
+release: 2006
 download_url: https://files.foxylion.de/downloads/ftp-class.zip
 ---
 
