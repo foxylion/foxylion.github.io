@@ -1,0 +1,6 @@
+<module rename-to="jj">
+    <inherits name="com.google.gwt.core.Core"/>
+    <add-linker name="sso"/>
+    <source path="client"/>
+    <entry-point class="de.jakobjarosch.site.js.client.EntryPoint"/>
+</module>

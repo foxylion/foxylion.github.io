@@ -2,3 +2,10 @@
 _site
 .sass-cache
 .jekyll-metadata
+build
+dist
+.idea
+war
+.gradle
+classes
+*.iml

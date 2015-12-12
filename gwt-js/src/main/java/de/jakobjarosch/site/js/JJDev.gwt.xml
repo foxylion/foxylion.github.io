@@ -1,0 +1,4 @@
+<module rename-to="jj">
+    <inherits name="de.jakobjarosch.site.js.JJ"/>
+    <add-linker name="xsiframe"/>
+</module>
