@@ -1,67 +1,29 @@
-/*
- * Copyright 2014 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
-/**
- * This startup script is used when we run superdevmode from an app server.
- */
-(function($wnd, $doc){
-  // document.head does not exist in IE8
-  var $head = $doc.head || $doc.getElementsByTagName('head')[0];
-  // Compute some codeserver urls so as the user does not need bookmarklets
-  var hostName = $wnd.location.hostname;
-  var serverUrl = 'http://' + hostName + ':9876';
-  var module = 'jj';
-  var nocacheUrl = serverUrl + '/recompile-requester/' + module;
-
-  // Insert the superdevmode nocache script in the first position of the head
-  var devModeScript = $doc.createElement('script');
-  devModeScript.src = nocacheUrl;
-
-  // Everybody except IE8 does fire an error event
-  // This means that we do not detect a non running SDM with IE8.
-  if (devModeScript.addEventListener) {
-    var callback = function() {
-      // Don't show the confirmation dialogue twice (multimodule)
-      if (!$wnd.__gwt__sdm__confirmed &&
-           (!$wnd.__gwt_sdm__recompiler || !$wnd.__gwt_sdm__recompiler.loaded)) {
-        $wnd.__gwt__sdm__confirmed = true;
-        if ($wnd.confirm(
-            "Couldn't load " +  module + " from Super Dev Mode\n" +
-            "server at " + serverUrl + ".\n" +
-            "Please make sure this server is ready.\n" +
-            "Do you want to try again?")) {
-          $wnd.location.reload();
-        }
-      }
-    };
-    devModeScript.addEventListener("error", callback, true);
-  }
-
-  var injectScriptTag = function(){
-    $head.insertBefore(devModeScript, $head.firstElementChild || $head.children[0]);
-  };
-
-  if (/loaded|complete/.test($doc.readyState)) {
-    injectScriptTag();
-  } else {
-    //defer app script insertion until the body is ready
-    if($wnd.addEventListener){
-      $wnd.addEventListener('load', injectScriptTag, false);
-    } else{
-      $wnd.attachEvent('onload', injectScriptTag);
-    }
-  }
-})(window, document);
+function jj(){var nb='',ob=0,pb='gwt.codesvr=',qb='gwt.hosted=',rb='gwt.hybrid',sb='jj',tb='__gwt_marker_jj',ub='<script id="',vb='"><\/script>',wb='SCRIPT',xb='#',yb='?',zb='/',Ab=1,Bb='base',Cb='img',Db='clear.cache.gif',Eb='meta',Fb='name',Gb='gwt:property',Hb='content',Ib='=',Jb='gwt:onPropertyErrorFn',Kb='Bad handler "',Lb='" for "gwt:onPropertyErrorFn"',Mb='gwt:onLoadErrorFn',Nb='" for "gwt:onLoadErrorFn"',Ob='Single-script hosted mode not yet implemented. See issue ',Pb='http://code.google.com/p/google-web-toolkit/issues/detail?id=2079',Qb='1DEB3318177ECAC9ED529CCD38C9A2C7',Rb=':',Sb='DOMContentLoaded',Tb=50;var k=nb,l=ob,m=pb,n=qb,o=rb,p=sb,q=tb,r=ub,s=vb,t=wb,u=xb,v=yb,w=zb,A=Ab,B=Bb,C=Cb,D=Db,F=Eb,G=Fb,H=Gb,I=Hb,J=Ib,K=Jb,L=Kb,M=Lb,N=Mb,O=Nb,P=Ob,Q=Pb,R=Qb,S=Rb,T=Sb,U=Tb;var V=window,W=document,X,Y,Z=k,$={},_=[],ab=[],bb=[],cb=l,db,eb;if(!V.__gwt_stylesLoaded){V.__gwt_stylesLoaded={}}if(!V.__gwt_scriptsLoaded){V.__gwt_scriptsLoaded={}}function fb(){var b=false;try{var c=V.location.search;return (c.indexOf(m)!=-1||(c.indexOf(n)!=-1||V.external&&V.external.gwtOnLoad))&&c.indexOf(o)==-1}catch(a){}fb=function(){return b};return b}
+function gb(){if(X&&Y){X(db,p,Z,cb)}}
+function hb(){var e,f=q,g;W.write(r+f+s);g=W.getElementById(f);e=g&&g.previousSibling;while(e&&e.tagName!=t){e=e.previousSibling}function h(a){var b=a.lastIndexOf(u);if(b==-1){b=a.length}var c=a.indexOf(v);if(c==-1){c=a.length}var d=a.lastIndexOf(w,Math.min(c,b));return d>=l?a.substring(l,d+A):k}
+;if(e&&e.src){Z=h(e.src)}if(Z==k){var i=W.getElementsByTagName(B);if(i.length>l){Z=i[i.length-A].href}else{Z=h(W.location.href)}}else if(Z.match(/^\w+:\/\//)){}else{var j=W.createElement(C);j.src=Z+D;Z=h(j.src)}if(g){g.parentNode.removeChild(g)}}
+function ib(){var b=document.getElementsByTagName(F);for(var c=l,d=b.length;c<d;++c){var e=b[c],f=e.getAttribute(G),g;if(f){if(f==H){g=e.getAttribute(I);if(g){var h,i=g.indexOf(J);if(i>=l){f=g.substring(l,i);h=g.substring(i+A)}else{f=g;h=k}$[f]=h}}else if(f==K){g=e.getAttribute(I);if(g){try{eb=eval(g)}catch(a){alert(L+g+M)}}}else if(f==N){g=e.getAttribute(I);if(g){try{db=eval(g)}catch(a){alert(L+g+O)}}}}}}
+__gwt_isKnownPropertyValue=function(a,b){return b in _[a]};__gwt_getMetaProperty=function(a){var b=$[a];return b==null?null:b};jj.onScriptLoad=function(a){jj=null;X=a;gb()};if(fb()){alert(P+Q);return}hb();ib();try{var jb;jb=R;var kb=jb.indexOf(S);if(kb!=-1){cb=Number(jb.substring(kb+A))}}catch(a){return}var lb;function mb(){if(!Y){Y=true;gb();if(W.removeEventListener){W.removeEventListener(T,mb,false)}if(lb){clearInterval(lb)}}}
+if(W.addEventListener){W.addEventListener(T,function(){mb()},false)}var lb=setInterval(function(){if(/loaded|complete/.test(W.readyState)){mb()}},U)}
+jj();(function () {var $gwt_version = "2.8.0-SNAPSHOT";var $wnd = window;var $doc = $wnd.document;var $moduleName, $moduleBase;var $stats = $wnd.__gwtStatsEvent ? function(a) {$wnd.__gwtStatsEvent(a)} : null;var $strongName = '1DEB3318177ECAC9ED529CCD38C9A2C7';var g="__java$exception",h={3:1,4:1},l="number",m="null",n={10:1,7:1,9:1},aa="fromIndex: ",_,p,q;function ba(){}function s(a,b){var c=$wnd;if(""===a)return c;var d=a.split(".");d[0]in c||!c.execScript||c.execScript("var "+d[0]);for(var e;d.length&&(e=d.shift());)c=c[e]=c[e]||!d.length&&b||{};return c}function ca(a){function b(){}b.prototype=a||{};return new b}function t(){}
+function u(a,b,c){var d=p,e,f=d[a],k=f instanceof Array?f[0]:null;f&&!k?_=f:(_=(e=b&&b.prototype,!e&&(e=p[b]),ca(e)),_.w=c,_.constructor=_,!b&&(_.A=ba),d[a]=_);for(d=3;d<arguments.length;++d)arguments[d].prototype=_;k&&(_.v=k)}p={};!Array.isArray&&(Array.isArray=function(a){return"[object Array]"===Object.prototype.toString.call(a)});function v(){}u(1,null,{},v);function w(){w=t;x=new v}function da(a){a.c&&y(a.backingJsObject)!==y(x)&&a.l()}u(4,1,h);_.k=function(){return ea};
+_.l=function(){var a,b;b=(a=fa(this.k()),null==this.b?a:a+": "+this.b);var c;a=(10).toString(16);c=a.length;var d=4-c;z();c="0000".substr(c,d);a=RegExp("\\u"+c+a,"g");c=String.fromCharCode(32);b=b.replace(a,c);b=Error(b);if(!("stack"in b))try{throw b;}catch(e){}this.backingJsObject=b;null!=b&&(b[g]=this);A();B.n(this)};_.c=!0;var x;function C(a){this.backingJsObject=x;this.b=a;da(this);this.l()}u(11,4,h);_.k=function(){return ga};u(8,11,h);_.k=function(){return ha};u(25,8,h);_.k=function(){return ia};
+u(26,25,h);_.k=function(){return ja};function ka(){ka=t;w();la=new v}function ma(a){ka();this.backingJsObject=x;this.backingJsObject=a;null!=a&&(a[g]=this);this.a=a}u(12,26,{12:1,3:1,4:1},ma);_.k=function(){return na};_.m=function(){return y(this.a)===y(la)?null:this.a};var la;function A(){A=t;var a,b;0<Error.stackTraceLimit?(Error.stackTraceLimit=64,b=!0):b="stack"in Error();a=new oa;B=b?a:new pa}var B;u(46,1,{});function pa(){}u(27,46,{},pa);
+_.n=function(a){var b={},c=[];a.fnStack=c;for(var d=arguments.callee.caller;d;){A();var e;if(!(e=d.name)){e=d;var f=/function(?:\s+([\w$]+))?\s*\(/.exec(d.toString());e=e.name=f&&f[1]||"anonymous"}c.push(e);e=":"+e;if(f=b[e]){var k,r;k=0;for(r=f.length;k<r;k++)if(f[k]===d)return}(f||(b[e]=[])).push(d);d=d.caller}};u(47,46,{});_.n=function(){};function oa(){}u(28,47,{},oa);
+function D(a){var b=qa;a:{var c=Array(a),d;switch(12){case 11:case 12:d=0;break;case 13:d=!1;break;default:a=c;break a}for(var e=0;e<a;++e)c[e]=d;a=c}b=ra(b,1);c=a;c.v=b;c.w={3:1};c.A=ba;c.__elementTypeId$=19;c.__elementTypeCategory$=12;return a}function E(a,b){return"string"===typeof a?!!sa[b]:a.w?!!a.w[b]:typeof a===l?!!ta[b]:"boolean"===typeof a?!!ua[b]:!1}function y(a){return null==a?null:a}var ua,ta,sa;function F(a){return a.backingJsObject}
+function va(a){var b;if(null!=a&&E(a,4))return a;b=a&&a[g];b||(a=b=new ma(a),A(),B.n(a));return b}u(21,11,h);_.k=function(){return wa};function xa(a){w();C.call(this,a)}u(22,21,h,xa);_.k=function(){return ya};function za(a,b,c){if(!(0<=a&&1114111>=a))throw F(new Aa);if(65536<=a)return b[c++]=55296+(a-65536>>10&1023)&65535,b[c]=56320+(a-65536&1023)&65535,2;b[c]=a&65535;return 1}function fa(a){null==a.j&&G(a);return a.j}
+function H(){this.g=Ba++;this.a=this.i=this.b=this.d=this.f=this.h=this.j=null}function Ca(a){var b;b=new H;b.j="Class$"+(a?"S"+a:""+b.g);b.b=b.j;b.h=b.j;return b}function I(a){var b;b=Ca(a);if(a){b.i=a;var c=b.t()?null:p[b.i];c?c.v=b:p[a]=[b]}return b}function ra(a,b){var c=a.a=a.a||[];return c[b]||(c[b]=a.o(b))}
+function G(a){if(a.s()){var b=a.c;b.t()?a.j="["+b.i:b.s()?a.j="["+b.q():a.j="[L"+b.q()+";";a.b=b.p()+"[]";a.h=b.r()+"[]"}else{var b=a.f,c=a.d,c=c.split("/");a.j=J(".",[b,J("$",c)]);a.b=J(".",[b,J(".",c)]);a.h=c[c.length-1]}}function J(a,b){for(var c=0;!b[c]||""==b[c];)c++;for(var d=b[c++];c<b.length;c++)b[c]&&""!=b[c]&&(d+=a+b[c]);return d}u(16,1,{},H);_.o=function(a){var b;b=new H;b.e=4;1<a?b.c=ra(this,a-1):b.c=this;return b};_.p=function(){null==this.j&&G(this);return this.b};_.q=function(){return fa(this)};
+_.r=function(){null==this.j&&G(this);return this.h};_.s=function(){return 0!=(this.e&4)};_.t=function(){return 0!=(this.e&1)};_.e=0;_.g=0;var Ba=1;function Aa(){w();this.backingJsObject=x;da(this);this.l()}function K(a){w();C.call(this,a)}u(6,8,h,Aa,K);_.k=function(){return Da};function M(a){w();C.call(this,a)}u(18,8,h,M);_.k=function(){return Ea};u(44,1,{3:1});var N;function z(){z=t}function O(a,b,c,d){z();a=d.u(a,b,c);return P(a,0,a.length)}
+function Q(a){try{return Fa(a)}catch(b){b=va(b);if(null!=b&&E(b,14))throw F(new xa(a));throw b.backingJsObject;}}function P(a,b,c){var d,e;c=b+c;e=a.length;if(0>b)throw F(new R(aa+b+" \x3c 0"));if(c>e)throw F(new R("toIndex: "+c+" \x3e size "+e));if(c<b)throw F(new R(aa+b+" \x3e toIndex: "+c));e="";for(d=b;d<c;)b=d+1E4<c?d+1E4:c,d=a.slice(d,b),d=String.fromCharCode.apply(null,d),e+=d,d=b;return e}sa={3:1,48:1,10:1,2:1};u(20,1,{},function(){});function R(a){w();M.call(this,a)}u(15,18,h,R);_.k=function(){return Ga};
+function Fa(a){if(null==a)throw F(new K((z(),"Null charset name")));a=(z(),a.toLocaleUpperCase());if((S(),T).a===a)return T;if(U.a===a)return U;if(V.a===a)return V;if(/^[A-Za-z0-9][\w-:\.\+]*$/.test(a))throw F(new Ha(a));throw F(new Ia(a));}u(7,1,{10:1,7:1});function Ia(a){w();K.call(this,(z(),null==a?m:a))}u(29,6,h,Ia);_.k=function(){return Ja};function Ha(a){w();K.call(this,(z(),null==a?m:a))}u(14,6,{3:1,4:1,14:1},Ha);_.k=function(){return Ka};
+function S(){S=t;V=new La;U=new Ma("ISO-LATIN-1");T=new Ma("ISO-8859-1")}u(9,7,n);var T,U,V;function Ma(a){this.a=a}u(17,9,n,Ma);_.u=function(a,b,c){var d,e;d=D(c);for(e=0;e<c;++e)d[e]=a[b+e]&255;return d};function La(){this.a="UTF-8"}u(24,9,n,La);
+_.u=function(a,b,c){var d,e,f,k,r,L;for(f=d=0;f<c;){++d;e=a[b+f];if(128==(e&192))throw F(new K("Invalid UTF8 sequence"));if(0==(e&128))++f;else if(192==(e&224))f+=2;else if(224==(e&240))f+=3;else if(240==(e&248))f+=4;else throw F(new K("Invalid UTF8 sequence"));if(f>c)throw F(new M("Invalid UTF8 sequence"));}f=D(d);for(r=k=L=0;r<c;){e=a[b+r++];0==(e&128)?(k=1,e&=127):192==(e&224)?(k=2,e&=31):224==(e&240)?(k=3,e&=15):240==(e&248)?(k=4,e&=7):248==(e&252)&&(k=5,e&=3);for(;0<--k;){d=a[b+r++];if(128!=
+(d&192))throw F(new K("Invalid UTF8 sequence at "+(b+r-1)+", byte\x3d"+(d>>>0).toString(16)));e=e<<6|d&63}L+=za(e,f,L)}return f};I(1);var ea=I(4),ga=I(11),ha=I(8),ia=I(25),ja=I(26),na=I(12);I(46);I(27);I(47);I(28);var wa=I(21),ya=I(22);I(16);var Da=I(6),Ea=I(18);I(44);I(2);I(20);var Ga=I(15);I(7);var Ja=I(29),Ka=I(14);I(9);I(17);I(24);I(0);u(32,1,{});I(32);function W(){W=t;A()}function Na(a){W();$wnd.setTimeout(function(){throw a;},0)}function Oa(){0!=X&&(X=0);Y=-1}var X=0,Pa=0,Y=-1;
+function Qa(){Qa=t;Ra=new Sa}function Sa(){}function Ta(a,b){var c,d,e;d=0;for(e=a.length;d<e;d++){c=a[d];try{if(c[1]){if(c[0].B()){var f=b;!f&&(f=[]);f[f.length]=c;b=f}}else c[0].B()}catch(k){if(k=va(k),null!=k&&E(k,4))c=k,W(),Na(null!=c&&E(c,12)?c.m():c);else throw k.backingJsObject;}}return b}u(31,32,{},Sa);var Ra;I(31);function Ua(){}u(42,1,{},Ua);I(42);function Z(){Z=t;Z()}ua={3:1,10:1};I(43);ta={3:1,10:1};I(45);function Va(a){w();K.call(this,a)}u(23,6,h,Va);_.k=function(){return Wa};
+var Wa=I(23),qa,$;$=Ca("C");$.i="C";$.e=1;qa=$;_=s("MyApp",Ua);_.click=function(){$wnd.window.alert("Hello, I'm GWT JsInterop!\nThanks for clicking.")};Z();_=s("java.lang.Boolean");_.$create__boolean=function(a){Z();return a};_.$create__java_lang_String=function(a){Z();z();a=null==a?!1:"true"==a?!0:4==a.length&&"true"==a.toLowerCase();Z();return a};_.$isInstance=function(a){Z();return"boolean"===typeof a};_=s("java.lang.Double");_.$create__double=function(a){return a};
+_.$create__java_lang_String=function(a){null==N&&(N=/^\s*[+-]?(NaN|Infinity|((\d+\.?\d*)|(\.\d+))([eE][+-]?\d+)?[dDfF]?)\s*$/);if(!N.test(a))throw F((w(),new Va('For input string: "'+a+'"')));return parseFloat(a)};_.$isInstance=function(a){return l===typeof a};_=s("java.lang.Number");_.$isInstance=function(a){return l===typeof a||a instanceof Number};z();_=s("java.lang.String");_.$create=function(){z();return""};_.$create__arrayOf_byte=function(a){z();return O(a,0,a.length,(S(),V))};
+_.$create__arrayOf_byte__int__int=function(a,b,c){z();return O(a,b,c,(S(),V))};_.$create__arrayOf_byte__int__int__java_lang_String=function(a,b,c,d){z();return O(a,b,c,Q(d))};_.$create__arrayOf_byte__int__int__java_nio_charset_Charset=O;_.$create__arrayOf_byte__java_lang_String=function(a,b){z();return O(a,0,a.length,Q(b))};_.$create__arrayOf_byte__java_nio_charset_Charset=function(a,b){z();return O(a,0,a.length,Q(b.a))};_.$create__arrayOf_char=function(a){z();return P(a,0,a.length)};
+_.$create__arrayOf_char__int__int=function(a,b,c){z();return P(a,b,c)};_.$create__arrayOf_int__int__int=function(a,b,c){z();var d,e;e=D(2*c);for(d=0;0<c--;)d+=za(a[b++],e,d);return P(e,0,d)};_.$create__java_lang_String=function(a){z();return a};_.$create__java_lang_StringBuffer=function(){z();return m};_.$create__java_lang_StringBuilder=function(){z();return m};_.$isInstance=function(a){z();return"string"===typeof a};
+var Xa=(W(),function(a){W();return function(){var b;a:{var c=arguments,d;0!=X&&(d=Date.now?Date.now():(new Date).getTime(),2E3<d-Pa&&(Pa=d,Y=$wnd.setTimeout(Oa,10)));if(0==X++){d=(Qa(),Ra);var e,f;if(d.a){f=null;do e=d.a,d.a=null,f=Ta(e,f);while(d.a);d.a=f}d=!0}else d=!1;try{b=a.apply(this,c);break a}finally{if(c=d)if(d=(Qa(),Ra),d.b){f=null;do e=d.b,d.b=null,f=Ta(e,f);while(d.b);d.b=f}--X;c&&-1!=Y&&($wnd.clearTimeout(Y),Y=-1)}b=void 0}return b}}),gwtOnLoad=gwtOnLoad=function(a,b,c){function d(){for(var a=
+0;a<e.length;a++)e[a]()}null==q&&(q=[]);var e=q;$moduleName=b;$moduleBase=c;if(a)try{Xa(d)()}catch(f){a(b,f)}else Xa(d)()};(function(){null==q&&(q=[]);for(var a=q,b=0;b<arguments.length;b++)a.push(arguments[b])})(function(){});var Ya=[[]];"object"===typeof window&&"object"===typeof window.$gwt&&(window.$gwt.permProps=Ya);window.gwtOnLoad=gwtOnLoad;if (jj) jj.onScriptLoad(gwtOnLoad);})();
