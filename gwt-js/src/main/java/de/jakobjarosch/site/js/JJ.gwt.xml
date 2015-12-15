@@ -1,4 +1,5 @@
 <module rename-to="jj">
+-   <inherits name="com.google.gwt.core.Core"/>
     <inherits name="elemental.Elemental"/>
     <add-linker name="sso"/>
     <source path="client"/>
