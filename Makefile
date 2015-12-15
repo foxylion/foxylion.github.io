@@ -5,7 +5,7 @@ jekyll-serve:
 	(cd jekyll && jekyll serve --host=0.0.0.0 --force_polling)
 
 gwt-superdev:
-	cp gwt-js/src/main/resources/jj.js jekyll/js/jj.js
+	cp gwt-js/src/main/resources/jj-superdev.js jekyll/js/jj.js
 
 
 # Build commands

@@ -6,7 +6,12 @@ build
 dist
 .idea
 war
+bin
 .gradle
 classes
 *.iml
 id_rsa
+.settings
+.project
+.classpath
+jekyll/js/jj.js

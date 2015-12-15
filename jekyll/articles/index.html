@@ -1,0 +1,37 @@
+---
+layout: default
+title: Articles
+bodyclass: listing
+---
+
+While trawling the web I find regularly interesting articles which are worth to share.
+Here you can find those articles I would recommend reading if you are interested on the topic.
+If a link does no longer work you can directly jump to Archive.org and get an archived version of the article.
+
+<hr class="hr">
+
+<script type="text/javascript">
+	window.onload = function() {
+		ival = window.setInterval(function() {
+			if(jj === undefined || jj.TagCloud === undefined) {
+				return;
+			}
+			new jj.TagCloud();
+			window.clearInterval(ival);
+		}, 100);
+	};
+</script>
+
+<div>
+	<h3>Tags</h3>
+	<ul id="tag-cloud"></ul>
+</div>
+
+<hr class="hr">
+
+<section class="posts txt-center container">
+  {% for post in site.categories.articles %}
+    {% include article.html %}
+  {% endfor %}
+</section>
+

@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
     providedCompile 'com.google.gwt:gwt-user:2.8.0-SNAPSHOT'
+    providedCompile 'com.google.gwt:gwt-elemental:2.8.0-SNAPSHOT'
 }
 
 gwt {
@@ -37,6 +38,7 @@ gwt {
     }
 
     compiler {
+    	style = 'PRETTY'
         strict = true
         enableClosureCompiler = true
         disableClassMetadata = true
@@ -46,5 +48,6 @@ gwt {
 
 tasks.withType(de.richsource.gradle.plugins.gwt.AbstractGwtActionTask) {
     args '-generateJsInteropExports'
+    args '-strict'
 }
 
