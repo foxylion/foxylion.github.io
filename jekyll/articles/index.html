@@ -13,7 +13,7 @@ If a link does no longer work you can directly jump to Archive.org and get an ar
 <script type="text/javascript">
 	window.onload = function() {
 		ival = window.setInterval(function() {
-			if(jj === undefined || jj.TagCloud === undefined) {
+			if(typeof jj == "undefined" || jj == null || typeof jj.TagCloud == "undefined" || jj.TagCloud == null) {
 				return;
 			}
 			new jj.TagCloud();

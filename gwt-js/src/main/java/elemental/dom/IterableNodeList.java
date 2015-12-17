@@ -21,7 +21,7 @@ public class IterableNodeList implements Iterable<Node> {
 			int size = nodeList.getLength();
 			@Override
 			public boolean hasNext() {
-				return index + 1 < size;
+				return index < size;
 			}
 
 			@Override

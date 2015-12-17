@@ -23,8 +23,14 @@ repositories {
 }
 
 dependencies {
-    providedCompile 'com.google.gwt:gwt-user:2.8.0-SNAPSHOT'
-    providedCompile 'com.google.gwt:gwt-elemental:2.8.0-SNAPSHOT'
+    providedCompile 'com.google.gwt:gwt-user:2.8.0-20151217.054503-121'
+    providedCompile 'com.google.gwt:gwt-elemental:2.8.0-20151217.054523-121'
+    runtime 'com.google.gwt:gwt-servlet:2.8.0-20151217.054510-121'
+    gwt 'com.google.gwt:gwt-dev:2.8.0-20151217.054454-121'
+    gwt 'com.google.gwt:gwt-codeserver:2.8.0-20151217.054518-121'
+    gwtSdk 'com.google.gwt:gwt-dev:2.8.0-20151217.054454-121'
+    gwtSdk 'com.google.gwt:gwt-codeserver:2.8.0-20151217.054518-121'
+    gwtSdk 'com.google.gwt:gwt-user:2.8.0-20151217.054503-121'
 }
 
 gwt {
@@ -47,6 +53,4 @@ gwt {
 
 tasks.withType(de.richsource.gradle.plugins.gwt.AbstractGwtActionTask) {
     args '-generateJsInteropExports'
-    args '-strict'
 }
-

@@ -4,10 +4,9 @@ import static elemental.dom.IterableNodeList.iterator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+import java.util.Map.Entry;
 
 import elemental.client.Browser;
 import elemental.dom.Document;
@@ -22,7 +21,7 @@ public class TagCloud {
 	private final Document doc = Browser.getDocument();
 
 	private final List<Element> allArticles = new ArrayList<>();
-	private final Set<String> tags = new HashSet<>();
+	private final Map<String, Element> tags = new HashMap<>();
 	private final Map<String, List<Element>> tagToArticles = new HashMap<>();
 
 	public TagCloud() {
@@ -38,7 +37,7 @@ public class TagCloud {
 				if (tag.getNodeName().equals("LI")) {
 					String tagName = ((Element) tag).getInnerText();
 					getArticleList(tagName).add(articleNode);
-					tags.add(tagName);
+					tags.put(tagName, null);
 				}
 			}
 		}
@@ -46,13 +45,46 @@ public class TagCloud {
 
 	private void createTagList() {
 		Element tagCloud = doc.getElementById("tag-cloud");
-		for (String tag : tags) {
+		for (String tag : tags.keySet()) {
 			Element tagElement = doc.createElement("li");
+			tags.put(tag, tagElement);
 			tagElement.setInnerText(tag);
 			tagElement.addEventListener(Event.CLICK, (e) -> {
-				Browser.getWindow().getConsole().log("Hello World!");
-			} , false);
+				if (tagElement.getAttribute("class") != null) {
+					disableFilter();
+				} else {
+					setFilter(tag);
+				}
+			} , true);
 			tagCloud.appendChild(tagElement);
+		}
+	}
+
+
+
+	private void setFilter(String tag) {
+		for (Element article : allArticles) {
+			if (tagToArticles.get(tag).contains(article)) {
+				article.getStyle().setDisplay("block");
+			} else {
+				article.getStyle().setDisplay("none");
+			}
+		}
+		for (Entry<String, Element> tagg : tags.entrySet()) {
+			if (tagg.getKey().equals(tag)) {
+				tagg.getValue().setAttribute("class", "active");
+			} else {
+				tagg.getValue().removeAttribute("class");
+			}
+		}
+	}
+	
+	private void disableFilter() {
+		for (Entry<String, Element> tagg : tags.entrySet()) {
+				tagg.getValue().removeAttribute("class");
+		}
+		for (Element article : allArticles) {
+			article.getStyle().setDisplay("block");
 		}
 	}
 
