@@ -3,6 +3,7 @@ package de.jakobjarosch.site.js.client;
 import static elemental.dom.IterableNodeList.iterator;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import elemental.dom.Node;
 import elemental.events.Event;
 import jsinterop.annotations.JsType;
 
-@JsType(namespace = "jj", name = "TagCloud")
+@JsType(namespace = "jj_js", name = "TagCloud")
 public class TagCloud {
 
 	private final Document doc = Browser.getDocument();
@@ -45,7 +46,7 @@ public class TagCloud {
 
 	private void createTagList() {
 		Element tagCloud = doc.getElementById("tag-cloud");
-		for (String tag : tags.keySet()) {
+		for (String tag : getOrderedTagList()) {
 			Element tagElement = doc.createElement("li");
 			tags.put(tag, tagElement);
 			tagElement.setInnerText(tag);
@@ -60,7 +61,12 @@ public class TagCloud {
 		}
 	}
 
-
+	private List<String> getOrderedTagList() {
+		ArrayList<String> tagList = new ArrayList<>();
+		tagList.addAll(tags.keySet());
+		Collections.sort(tagList);
+		return tagList;
+	}
 
 	private void setFilter(String tag) {
 		for (Element article : allArticles) {
@@ -78,10 +84,10 @@ public class TagCloud {
 			}
 		}
 	}
-	
+
 	private void disableFilter() {
 		for (Entry<String, Element> tagg : tags.entrySet()) {
-				tagg.getValue().removeAttribute("class");
+			tagg.getValue().removeAttribute("class");
 		}
 		for (Element article : allArticles) {
 			article.getStyle().setDisplay("block");

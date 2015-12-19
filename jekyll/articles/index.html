@@ -10,13 +10,14 @@ If a link does no longer work you can directly jump to Archive.org and get an ar
 
 <hr class="hr">
 
+
 <script type="text/javascript">
 	window.onload = function() {
 		ival = window.setInterval(function() {
-			if(typeof jj == "undefined" || jj == null || typeof jj.TagCloud == "undefined" || jj.TagCloud == null) {
+			if(typeof jj_js == "undefined" || typeof jj_js.TagCloud == "undefined") {
 				return;
 			}
-			new jj.TagCloud();
+			new jj_js.TagCloud();
 			window.clearInterval(ival);
 		}, 100);
 	};
