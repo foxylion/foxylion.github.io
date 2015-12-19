@@ -5,7 +5,7 @@ hackernews: 273900
 tags:
 - IT
 - Web
-- User-Experience
+- User Experience
 ---
 
-A article about latency and how it could affect the user experience.
+Some interesting details about latency and how it could affect the user experience.
