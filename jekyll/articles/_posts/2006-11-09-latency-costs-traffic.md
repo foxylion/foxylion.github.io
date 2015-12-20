@@ -6,6 +6,8 @@ tags:
 - IT
 - Web
 - User Experience
+- Google
+- Amazon
 ---
 
 Some interesting details about latency and how it could affect the user experience.

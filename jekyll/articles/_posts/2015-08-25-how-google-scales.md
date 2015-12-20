@@ -5,6 +5,7 @@ hackernews: 10074773
 tags:
 - IT
 - Infrastructure
+- Google
 ---
 
 Technologies, hardware and technics behind the Google infrastructure.

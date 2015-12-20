@@ -6,6 +6,7 @@ tags:
 - IT
 - Infrastructure
 - Networks
+- Yelp
 ---
 
 Achieve a zero downtime re-deploy with HAProxy.
