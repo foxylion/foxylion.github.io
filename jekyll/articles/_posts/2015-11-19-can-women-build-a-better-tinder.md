@@ -3,6 +3,7 @@ title: Can Women Build A Better Tinder?
 website: https://medium.com/backchannel/can-women-build-a-better-tinder-f125b5c5250a
 hackernews: 10598439
 tags:
+- Human
 - Social
 - Relationships
 ---

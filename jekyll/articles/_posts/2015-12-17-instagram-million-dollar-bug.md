@@ -5,7 +5,6 @@ hackernews: 10754194
 tags:
 - IT
 - Security
-- Whitehats
 ---
 
 Techical details about the "million dollar" hack of Instagram and how Facebook reacted.
