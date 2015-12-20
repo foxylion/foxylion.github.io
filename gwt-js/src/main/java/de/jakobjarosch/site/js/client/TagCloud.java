@@ -45,20 +45,25 @@ public class TagCloud {
 	}
 
 	private void createTagList() {
-		Element tagCloud = doc.getElementById("tag-cloud");
+		int timeout = 0;
 		for (String tag : getOrderedTagList()) {
-			Element tagElement = doc.createElement("li");
-			tags.put(tag, tagElement);
-			tagElement.setInnerText(tag);
-			tagElement.addEventListener(Event.CLICK, (e) -> {
-				if (tagElement.getAttribute("class") != null) {
-					disableFilter();
-				} else {
-					setFilter(tag);
-				}
-			} , true);
-			tagCloud.appendChild(tagElement);
+			Browser.getWindow().setTimeout(() -> createTag(tag), timeout += 20); 
 		}
+	}
+
+	private void createTag(String tag) {
+		Element tagCloud = doc.getElementById("tag-cloud");
+		Element tagElement = doc.createElement("li");
+		tags.put(tag, tagElement);
+		tagElement.setInnerText(tag);
+		tagElement.addEventListener(Event.CLICK, (e) -> {
+			if (tagElement.getAttribute("class") != null) {
+				disableFilter();
+			} else {
+				setFilter(tag);
+			}
+		} , true);
+		tagCloud.appendChild(tagElement);
 	}
 
 	private List<String> getOrderedTagList() {
