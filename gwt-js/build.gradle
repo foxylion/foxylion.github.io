@@ -23,14 +23,14 @@ repositories {
 }
 
 dependencies {
-    providedCompile 'com.google.gwt:gwt-user:2.8.0-20151219.054719-123'
-    gwtSdk 'com.google.gwt:gwt-user:2.8.0-20151219.054719-123'
-    providedCompile 'com.google.gwt:gwt-elemental:2.8.0-20151219.054739-123'
-    gwt 'com.google.gwt:gwt-dev:2.8.0-20151219.054711-123'
-    gwtSdk 'com.google.gwt:gwt-dev:2.8.0-20151219.054711-123'
-    gwt 'com.google.gwt:gwt-codeserver:2.8.0-20151219.054734-123'
-    gwtSdk 'com.google.gwt:gwt-codeserver:2.8.0-20151219.054734-123'
-    runtime 'com.google.gwt:gwt-servlet:2.8.0-20151219.054726-123'
+    providedCompile 'com.google.gwt:gwt-user:2.8.0-SNAPSHOT'
+    gwtSdk 'com.google.gwt:gwt-user:2.8.0-SNAPSHOT'
+    providedCompile 'com.google.gwt:gwt-elemental:2.8.0-SNAPSHOT'
+    gwt 'com.google.gwt:gwt-dev:2.8.0-SNAPSHOT'
+    gwtSdk 'com.google.gwt:gwt-dev:2.8.0-SNAPSHOT'
+    gwt 'com.google.gwt:gwt-codeserver:2.8.0-SNAPSHOT'
+    gwtSdk 'com.google.gwt:gwt-codeserver:2.8.0-SNAPSHOT'
+    runtime 'com.google.gwt:gwt-servlet:2.8.0-SNAPSHOT'
 }
 
 gwt {
