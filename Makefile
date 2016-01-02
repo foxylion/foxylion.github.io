@@ -19,7 +19,7 @@ jekyll-build:
 	(cd jekyll && jekyll build --destination ../dist)
 
 gwt-compile:
-	(cd gwt-js && ./gradlew compileGwt)
+	(cd gwt-js && TERM=dumb ./gradlew -i compileGwt)
 	cp gwt-js/build/gwt/out/jj/jj.nocache.js jekyll/js/jj.js
 
 deploy:
