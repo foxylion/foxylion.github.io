@@ -36,7 +36,7 @@ public class TagCloud {
 			allArticles.add(articleNode);
 			for (Node tag : iterator(tagList.getChildNodes())) {
 				if (tag.getNodeName().equals("LI")) {
-					String tagName = ((Element) tag).getInnerText();
+					String tagName = ((Element) tag).getInnerHTML();
 					getArticleList(tagName).add(articleNode);
 					tags.put(tagName, null);
 				}
@@ -55,7 +55,7 @@ public class TagCloud {
 		Element tagCloud = doc.getElementById("tag-cloud");
 		Element tagElement = doc.createElement("li");
 		tags.put(tag, tagElement);
-		tagElement.setInnerText(tag);
+		tagElement.setInnerHTML(tag);
 		tagElement.addEventListener(Event.CLICK, (e) -> {
 			if (tagElement.getAttribute("class") != null) {
 				disableFilter();
