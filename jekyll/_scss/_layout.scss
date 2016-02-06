@@ -61,7 +61,7 @@
 
 .site-header {
   h1 {
-    margin-top: 1em;
+    margin-top: 1.2em;
 
     small {
       display: block;
@@ -71,9 +71,9 @@
 }
 
 .author-thumb {
-  opacity: .7;
-  display: inline-block;
-  transition: opacity .2s ease;
+  opacity: .9;
+  float: left;
+  margin-left: 100px;
 
   img {
     width: 100px;
@@ -81,11 +81,6 @@
     margin: 0;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: .9;
-  }
 }
 
 .navbar {
@@ -111,7 +106,7 @@
   }
 
   .btn {
-    color: #fff;
+    color: $white-color;
     font-weight: 400;
     line-height: 2em;
     padding: 0 1em;
@@ -137,10 +132,6 @@
   }
 }
 
-/**
- * .posts
- */
-
 .post {
   margin: 3em 0;
 
@@ -162,7 +153,7 @@
 
 .listing .post {
   .info {
-    background-color: #eee;
+    background-color: $silver-color;
     margin-bottom: 1em;
 
     p {
@@ -170,7 +161,7 @@
     }
 
     label {
-      color: #999;
+      color: $gray-color;
       font-style: italic;
       font-size: 0.8em;
     }
@@ -196,7 +187,7 @@
 .posts {
   .post {
     h1 {
-      font-size: 1.4rem;
+      font-size: 1.2em;
     }
   }
 }
@@ -221,19 +212,6 @@
   }
 }
 
-.share {
-  padding: 1.2em 0 0;
-  width: 100%;
-  text-align: right;
-
-  span, a {
-    display: inline-block;
-    color: #787878;
-    text-decoration: none;
-    padding-left: 5px;
-  }
-}
-
 .social {
   text-align: center;
   margin: 2em 0;
@@ -244,9 +222,13 @@
   }
 
   a {
-    color: #999;
+    color: $gray-color;
     text-decoration: none;
     font-size: 1.2em;
+  }
+
+  a:hover {
+    color: $primary-color;
   }
 }
 

@@ -2,7 +2,10 @@
 <article class="post">
     <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
+
+    {% if post.screenshot != nil %}
     <img src="{{ post.screenshot }}" alt="Screenshot">
+    {% endif %}
 
     <a href="{{ post.website }}" class="btn" target="_blank">Website</a>
 </article>

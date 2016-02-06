@@ -1,7 +1,7 @@
 code {
   font-family: monospace;
   font-size: 0.85em;
-  background-color: #eee;
+  background-color: $silver-color;
   padding: 1px 4px;
 }
 
@@ -15,7 +15,7 @@ code {
 
 
   &, .hll, pre, code {
-    background-color: #eee;
+    background-color: $silver-color;
     border: none;
   }
 

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {% include head.html %}
-  </head>
-  <body class="{% if page.bodyclass %}{{ page.bodyclass }}{% endif %}">
+<head>
+  {% include head.html %}
+</head>
+<body class="{% if page.bodyclass %}{{ page.bodyclass }}{% endif %}">
 
-    <main class="container">
+  <main class="container">
+    <header class="site-header">
+      <div class="container txt-center">
+        {% include header-navigation.html %}
+        {% include header-about.html %}
+      </div>
+    </header>
 
-        {% include header.html %}
-
-        <section class="main-content">
-          {{ content }}
-        </section>
-
-        {% include footer.html %}
-
-    </main>
-
-    {% include github-corner.html %}
-  </body>
+    <section class="main-content">
+      {{ content }}
+    </section>
+    {% include footer.html %}
+  </main>
+  {% include github-corner.html %}
+</body>
 </html>

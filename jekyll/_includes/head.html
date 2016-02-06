@@ -1,18 +1,24 @@
-{% comment %}
-  page_title
-{% endcomment %}
-{% assign page_title = '' %}
-{% if page.title == "Home" %}{% capture page_title %}{{ site.title }} | {{ site.description }}{%if paginator and paginator.page != 1 %} - Página {{ paginator.page }}{% endif %}{% endcapture %}{% else %}{% capture page_title %}{%if page.slug == 'category' %}Categoria: {% endif %}{%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title }}{% endcapture %}{% endif %}
-{% capture page_title %}{{ page_title | strip | rstrip | lstrip | escape | strip_newlines }}{% endcapture %}
 
-{% comment %}
-  page_description
-{% endcomment %}
+{% assign page_title = '' %}
+{% if page.title == nil %}
+  {%capture page_title %}Home of {{ site.title }}{% endcapture %}
+{% else %}
+  {%capture page_title %}{{ page.title }} | {{ site.title }}{% endcapture %}
+{% endif %}
+
 {% assign page_description = '' %}
 {% capture page_description %}{% if page.description %}{{ page.description | strip_html | strip | rstrip | strip_newlines | truncate: 160 }}{% else %}{{ site.meta_description }}{% endif %}{%if paginator and paginator.page != 1 %} - Página {{ paginator.page }} {% endif %}{%if page.slug == 'category' %} Categoria: {{ page.title }}{% endif %}{%if page.slug == 'tag' %} Tag: {{ page.title }}{% endif %}{% endcapture %}
 {% capture page_description %}{{ page_description | strip | rstrip | lstrip | escape | strip_newlines }}{% endcapture %}
 
 <title>{{ page_title }}</title>
+
+
+<!--
+page.title = {{ page.title }}
+page.title.blank = {{ page.title == blank }}
+site.title = {{ site.title }}
+
+-->
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
