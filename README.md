@@ -2,6 +2,8 @@
 
 The websites uses Jekyll for static html file generation and GWT 2.8 to create the used Javascript.
 
+[![Build Status](https://travis-ci.org/foxylion/foxylion.github.io.svg?branch=develop)](https://travis-ci.org/foxylion/foxylion.github.io)
+
 ## Setup you development environment
 
 To run your development environment you require Vagrant and VirtualBox.
