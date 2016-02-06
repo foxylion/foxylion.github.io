@@ -1,6 +1,6 @@
 
 title: Home of Jakob Jarosch
-description: > # GitHub user page of Jakob Jarosch (@foxylion)
+description: GitHub user page of Jakob Jarosch (@foxylion)
 baseurl: ""
 url: "https://www.jakobjarosch.de"
 repository: "https://github.com/foxylion/foxylion.github.io"
@@ -8,7 +8,9 @@ google_analytics: UA-2072722-5
 
 permalink   : /:categories/:year/:title/
 markdown    : kramdown
-highlighter : pygments
+highlighter : rouge
+
+excerpt_separator: <!--more-->
 
 source: .
 destination: _site
