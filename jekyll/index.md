@@ -11,6 +11,6 @@ I work for [itdesign GmbH](https://itdesign.de/) which is creating PPM software.
 You can find more details about me behind the social media icons at the bottom of the page.
 
 You can also scroll through my [blog](/blog/), [projects](/projects/) or [references](/references/).
-I've also a list of good [articles](/articles/) I found in the web.
+I've also a list of good [articles](/articles/) I found on the web.
 
 Feel free to contact me if you are in the mood. :)
