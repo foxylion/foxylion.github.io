@@ -1,6 +1,6 @@
 ---
 title: "Docker Image for Counter Strike Global Offensive"
-website: https://github.com/foxylion/steam-csgo
+website: https://github.com/foxylion/docker-steam-csgo
 order: 300
 ---
 
