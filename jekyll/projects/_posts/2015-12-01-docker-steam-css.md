@@ -1,6 +1,6 @@
 ---
 title: "Docker Image for Counter Strike Source"
-website: https://github.com/foxylion/steam-css
+website: https://github.com/foxylion/docker-steam-css
 order: 400
 ---
 
