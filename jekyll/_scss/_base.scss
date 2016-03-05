@@ -186,6 +186,8 @@ table {
   margin-bottom: 5px;
   border-spacing: 2px;
   border-collapse: separate;
+  overflow-x: auto;
+  display: block;
 }
 th, td {
   padding: 2px 5px;
