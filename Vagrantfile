@@ -5,11 +5,13 @@ Vagrant.configure(2) do |config|
     vb.memory = 1024
     vb.cpus = 1
   end
-  
-  config.vm.provision :shell, :inline => "sudo add-apt-repository ppa:brightbox/ruby-ng && sudo apt-get update && sudo apt-get -y install build-essential ruby2.1 ruby2.1-dev zlib1g-dev"
-  config.vm.provision :shell, :inline => "sudo gem install jekyll github-pages travis"
-  config.vm.provision :shell, :inline => "sudo add-apt-repository ppa:openjdk-r/ppa && sudo apt-get update && sudo apt-get install -y openjdk-8-jdk"
-  config.vm.provision :shell, :inline => "echo \"cd /vagrant\" > /home/vagrant/.bashrc"
-
   config.ssh.forward_agent = true
+  config.vm.provision :shell, :inline => <<SHELL
+    add-apt-repository ppa:brightbox/ruby-ng
+    add-apt-repository ppa:openjdk-r/ppa
+    apt-get update
+    apt-get -y install build-essential ruby2.2 ruby2.2-dev zlib1g-dev openjdk-8-jdk
+    gem install jekyll github-pages travis
+    echo "cd /vagrant" > /home/vagrant/.bashrc
+SHELL
 end
