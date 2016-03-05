@@ -4,7 +4,7 @@ title:  "Deploy Maven Atrifacts on Maven Central with Travis CI"
 date:   2016-02-06 12:00:00 +0000
 ---
 
-This blog post will show the steps required to deploy a built maven artifact on
+This blog post will show the steps required to deploy a maven artifact on
 Maven central using Travis CI.
 
 <!--more-->
@@ -227,5 +227,5 @@ travis-deploy:
 
 When you push something or a pull request is created the project is automatically
 built using ``make build``. When you create a tag for the repository it will
-automatically deploy an artifact to the Naven central repository with the version
+automatically deploy an artifact to the Maven central repository with the version
 set to the tag name.
