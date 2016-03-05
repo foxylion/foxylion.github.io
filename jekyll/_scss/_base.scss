@@ -180,3 +180,21 @@ ol {
 li {
   list-style-position: inside;
 }
+
+table {
+  width: 100%;
+  margin-bottom: 5px;
+  border-spacing: 2px;
+  border-collapse: separate;
+}
+th, td {
+  padding: 2px 5px;
+  text-align: left;
+}
+th {
+  background-color: $silver-color;
+  font-weight: bold;
+}
+td {
+  background-color: $white-color;
+}
