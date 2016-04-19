@@ -25,6 +25,7 @@ equivalent in IntelliJ) I use many times a day in Eclipse.
 | Open Declaration | ``F3`` | ``Ctrl+B`` |
 | Show Type Hierarchy | ``Ctrl+T`` | ``Ctrl+H`` |
 | Class Hierarchy Diagram |  | ``Ctrl+Alt+U`` & ``Return`` |
+| Delete Line | ``Ctrl+D`` | ``Ctrl+Y`` |
 
 ** By default only removing unused imports, can be improved:<br>
 ``File`` ~ ``Settings`` ~ ``Editor`` ~ ``General`` ~ ``Auto Import`` ~ Check all boxes
