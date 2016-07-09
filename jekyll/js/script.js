@@ -69,3 +69,28 @@
     });
   }
 }(jQuery));
+
+
+
+
+
+(function($) {
+  $.fn.greeter = function() {
+    var greetingElement = this;
+    var i = 0;
+    var greetings = [ "Hola, soy", "Hi, I'm", "Hallo, ich bin", "Salut, je suis" ];
+
+    function nextGreeting() {
+      $(greetingElement).shuffleLetters({
+        'text': greetings[i],
+        'callback': function() {
+          i++;
+          if(i > greetings.length - 1) i = 0;
+          setTimeout(nextGreeting, 5000);
+        }
+      });
+    }
+
+    nextGreeting();
+  }
+}(jQuery));

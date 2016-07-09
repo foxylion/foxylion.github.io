@@ -3,6 +3,15 @@ layout: default
 permalink: /
 ---
 
+<script type="text/javascript">
+$(document).ready(function() {
+  setTimeout(function() {
+    $('#greeting').greeter();
+    $('#sub-greeting').shuffleLetters({ text: 'Jakob' });
+  }, 2000);
+});
+</script>
+
 Hi, I'm a [software engineer](https://github.com/foxylion),
 [scout](https://www.dpsg-nuertingen.de/) and
 [photographer](https://www.instagram.com/foxylion/) located in
