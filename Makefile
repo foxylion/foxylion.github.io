@@ -1,15 +1,8 @@
-# Serve commands
-serve: gwt-superdev jekyll-serve
 
 jekyll-serve:
-	(cd jekyll && jekyll serve --host=0.0.0.0 --force_polling)
+	(cd jekyll && docker run --rm -it -p 4000:4000 -v `pwd`:/files -w /files jekyll/jekyll:pages jekyll serve --force_polling)
 
-gwt-superdev:
-	cp gwt-js/src/main/resources/jj-superdev.js jekyll/js/jj.js
-
-
-# Build commands
-build: clean-dist gwt-compile jekyll-build
+travis-build: clean-dist jekyll-build
 	cp CNAME dist/
 
 clean-dist:
@@ -18,9 +11,5 @@ clean-dist:
 jekyll-build:
 	(cd jekyll && jekyll build --destination ../dist)
 
-gwt-compile:
-	(cd gwt-js && TERM=dumb ./gradlew -i compileGwt)
-	cp gwt-js/build/gwt/out/jj/jj.nocache.js jekyll/js/jj.js
-
-deploy:
+travis-deploy:
 	./deploy.sh

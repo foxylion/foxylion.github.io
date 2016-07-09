@@ -11,15 +11,9 @@ Archive.org has cached copies of each article.</p>
 <hr class="hr">
 
 <script type="text/javascript">
-	window.onload = function() {
-		ival = window.setInterval(function() {
-			if(typeof jj_js == "undefined" || typeof jj_js.TagCloud == "undefined") {
-				return;
-			}
-			new jj_js.TagCloud();
-			window.clearInterval(ival);
-		}, 100);
-	};
+	$(document).ready(function() {
+		$('#posts').tagList($('#tag-cloud'));
+	});
 </script>
 
 <div>
@@ -29,7 +23,7 @@ Archive.org has cached copies of each article.</p>
 
 <hr class="hr">
 
-<section class="posts txt-center container">
+<section id="posts" class="posts txt-center container">
   {% for post in site.categories.articles %}
     {% include article.html %}
   {% endfor %}

@@ -2,9 +2,6 @@ language: ruby
 rvm:
 - ruby-2.2.3
 
-jdk:
-- oraclejdk8
-
 addons:
   apt:
     packages:
@@ -19,5 +16,5 @@ install:
 - gem install jekyll github-pages
 
 script:
-- make build
-- make deploy
+- make travis-build
+- make travis-deploy
