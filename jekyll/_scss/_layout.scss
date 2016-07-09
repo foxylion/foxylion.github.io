@@ -73,7 +73,7 @@
 .about {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 
   .author-thumb {
     opacity: .9;
@@ -93,6 +93,8 @@
     h1 {
       margin: 0;
       width: 275px;
+        font-size: 1.7em;
+        height: 2em;
       @media (max-width: 420px) {
         font-size: 1.3em;
         width: 200px;
