@@ -11,7 +11,7 @@ or [Docker Toolbox (VirtualBox)](https://www.docker.com/products/docker-toolbox)
 <!--more-->
 
 In this tutorial we will use Docker Toolbox to get a running Docker instance on our machine. This tutorial may also work
-using Docker for Windows (Hyper V) but is was tested.
+using Docker for Windows (Hyper V) but is wasn't tested.
 
 ### 1. Install Docker Toolbox
 
