@@ -59,7 +59,7 @@ Docker Machine is mounting `C:\Users\` of your Windows to `//c` on the Docker ho
 when we want to mount any path directly from WSL.
 
 When you replace the last line in `/usr/local/bin/docker` with the following code snippet this will be done automtically
-and a command like ```docker run -v `pwd`:/tmp busybox /bin/sh` will work and mount the folder correctly. as long as you
+and a command like ```docker run -v `pwd`:/tmp busybox /bin/sh``` will work and mount the folder correctly. as long as you
 are currently under `/mnt/[a-z]/*`.
 
 ```bash
