@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/foxylion/foxylion.github.io/develop.svg?style=flat-square)](https://travis-ci.org/foxylion/foxylion.github.io)
 ![License](https://img.shields.io/badge/license-custom-blue.svg?style=flat-square)
 
-The websites uses Jekyll for static html file generation and GWT 2.8 to create the used Javascript.
+The websites uses Jekyll for static html file generation and jQuery for some fancy things.
 
 ## Setup you development environment
 
