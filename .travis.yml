@@ -17,4 +17,9 @@ install:
 
 script:
 - make travis-build
-- make travis-deploy
+
+deploy:
+  provider: script
+  script: make travis-deploy
+  on:
+    branch: master
