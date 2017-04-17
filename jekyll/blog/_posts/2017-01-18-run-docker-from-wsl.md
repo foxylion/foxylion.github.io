@@ -33,7 +33,7 @@ We'll use a bash script which overrides the `docker` command globally inside of 
 Inside the bash script we are able to tweak the arguments passed to docker (we will need that later).
 But first of all we need to configure docker to communicate with the Docker on our Windows host.
 
-```bash
+{% highlight shell %}
 sudo touch /usr/local/bin/docker
 sudo chmod +x /usr/local/bin/docker
 cat EOF > /usr/local/bin/docker
@@ -46,7 +46,7 @@ export DOCKER_MACHINE_NAME="default"
 
 eval /usr/bin/docker $@
 EOF
-```
+{% endhighlight %}
 
 This script will now set all required environment variables before running the docker command.
 
@@ -62,9 +62,9 @@ When you replace the last line in `/usr/local/bin/docker` with the following cod
 and a command like ```docker run -v `pwd`:/tmp busybox /bin/sh``` will work and mount the folder correctly. as long as you
 are currently under `/mnt/[a-z]/*`.
 
-```bash
+{% highlight shell %}
 CMD=`echo -n "$@" | sed -E 's/\/mnt\/([a-z])\//\/\/\1\//g'`
 eval /usr/bin/docker $CMD
-```
+{% endhighlight %}
 
 I hope this will help you to get started with Docker inside your WSL.
