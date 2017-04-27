@@ -173,12 +173,15 @@ q {
 
 ul {
   list-style: disc;
+  margin-left: 20px;
+}
+ul ul {
+  margin-bottom: 0px;
 }
 ol {
   list-style: decimal;
 }
 li {
-  list-style-position: inside;
 }
 
 table {
