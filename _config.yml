@@ -50,6 +50,6 @@ social:
 - slug: steam
   link: https://steamcommunity.com/id/foxylion
 - slug: mail
-  link: mailto:dev{at}<my-firstname><my-lastname>.de
+  link: mailto:dev(at){my-firstname}{my-lastname}.de
 - slug: skype
   link: skype://foxylion?add
