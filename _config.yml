@@ -1,14 +1,13 @@
-
-title: Jakob Jarosch
-description: Homepage of Jakob Jarosch (@foxylion)
+title: Jakob Nohe
+description: Homepage of Jakob Nohe (@foxylion)
 baseurl: ""
-url: "https://jakobjarosch.de"
+url: "https://jakobnohe.de"
 repository: "https://github.com/foxylion/foxylion.github.io"
 google_analytics: UA-2072722-5
 
-permalink   : /:categories/:year/:title/
-markdown    : kramdown
-highlighter : rouge
+permalink: /:categories/:year/:title/
+markdown: kramdown
+highlighter: rouge
 
 excerpt_separator: <!--more-->
 
@@ -19,35 +18,35 @@ sass:
   style: compressed
 
 social:
-- slug: github
-  link: https://github.com/foxylion
-- slug: stackoverflow
-  link: https://stackoverflow.com/users/439126/foxylion
-- slug: linkedin
-  link: https://linkedin.com/in/jakobnohe
-- slug: xing
-  link: https://www.xing.com/profile/Jakob_Jarosch
-- slug: facebook
-  link: https://facebook.com/jakobnohe
-- slug: twitter
-  link: https://twitter.com/foxylion
-- slug: reddit
-  link: https://www.reddit.com/user/foxylion
-- slug: spotify
-  link: https://play.spotify.com/user/foxylion
-- slug: lastfm
-  link: https://www.last.fm/user/foxylion
-- slug: youtube
-  link: https://www.youtube.com/user/foxylion
-- slug: instagram
-  link: https://www.instagram.com/foxylion
-- slug: 500px
-  link: https://500px.com/foxylion
-- slug: flickr
-  link: https://www.flickr.com/photos/foxylion
-- slug: steam
-  link: https://steamcommunity.com/id/foxylion
-- slug: mail
-  link: mailto:dev(at){my-firstname}{my-lastname}.de
-- slug: skype
-  link: skype://foxylion?add
+  - slug: github
+    link: https://github.com/foxylion
+  - slug: stackoverflow
+    link: https://stackoverflow.com/users/439126/foxylion
+  - slug: linkedin
+    link: https://linkedin.com/in/jakobnohe
+  - slug: xing
+    link: https://www.xing.com/profile/Jakob_Nohe
+  - slug: facebook
+    link: https://facebook.com/jakobnohe
+  - slug: twitter
+    link: https://twitter.com/foxylion
+  - slug: reddit
+    link: https://www.reddit.com/user/foxylion
+  - slug: spotify
+    link: https://play.spotify.com/user/foxylion
+  - slug: lastfm
+    link: https://www.last.fm/user/foxylion
+  - slug: youtube
+    link: https://www.youtube.com/user/foxylion
+  - slug: instagram
+    link: https://www.instagram.com/foxylion
+  - slug: 500px
+    link: https://500px.com/foxylion
+  - slug: flickr
+    link: https://www.flickr.com/photos/foxylion
+  - slug: steam
+    link: https://steamcommunity.com/id/foxylion
+  - slug: mail
+    link: mailto:dev(at){my-firstname}{my-lastname}.de
+  - slug: skype
+    link: skype://foxylion?add
