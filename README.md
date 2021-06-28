@@ -6,11 +6,15 @@ The websites uses Jekyll for static html file generation and jQuery for some fan
 
 ## Setup you development environment
 
-To run your development environment you require Vagrant and VirtualBox.
+### Instructions for Ubuntu
 
-```bash
-vagrant up
-vagrant ssh
-make jekyll-serve
 ```
+sudo apt-get install ruby-full build-essential zlib1g-dev
 
+## Add the following lines to your `~/.zshrc`
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+# Install jekyll as a gem
+gem install jekyll bundler
+```

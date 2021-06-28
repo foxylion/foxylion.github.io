@@ -25,7 +25,7 @@
   width: 60px;
   height: 3px;
   background-color: $primary-color;
-  margin: 3em auto;
+  margin: 1em auto;
   border: none;
 }
 
@@ -92,13 +92,8 @@
 
     h1 {
       margin: 0;
-      width: 275px;
-        font-size: 1.7em;
-        height: 2em;
-      @media (max-width: 420px) {
-        font-size: 1.3em;
-        width: 200px;
-      }
+      max-width: 320px;
+      font-size: 1em;
     }
   }
 
@@ -159,6 +154,7 @@
 
   h1 {
     margin-bottom: .3em;
+    font-size: 1.2em;
   }
 
   .post-meta {
@@ -170,6 +166,12 @@
     content: '';
 
     @extend .hr;
+  }
+
+  li {
+    margin-left: 25px;
+    padding-left: 5px;
+    list-style-position: outside;
   }
 }
 
