@@ -3,7 +3,7 @@ description: Homepage of Jakob Nohe (@foxylion)
 baseurl: ""
 url: "https://jakobnohe.de"
 repository: "https://github.com/foxylion/foxylion.github.io"
-google_analytics: UA-2072722-5
+google_analytics: G-E3JWGKBNVF
 
 permalink: /:categories/:year/:title/
 markdown: kramdown
